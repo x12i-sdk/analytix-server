@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "package": "@x12i/analytix-server",
+  "packageVersion": "1.1.0",
+  "npmUrl": "https://www.npmjs.com/package/@x12i/analytix-server",
+  "usageRepository": "https://github.com/x12i-sdk/analytix-server",
+  "sourceRepository": "https://github.com/x12i/analytix",
+  "sourceCommit": "cf2ed708652df6f853af877340acc385d17c76f2",
+  "sourcePackageDirectory": "packages/analytix-server",
+  "example": {
+    "title": "Check the service default authentication behavior before mounting routes",
+    "entrypoint": "src/index.mjs",
+    "command": "npm start",
+    "requiresCredentials": false,
+    "validation": "passed",
+    "validatedAt": "2026-10-24T14:36:16.728219+00:00",
+    "isolatedInstallation": true,
+    "sourceSha256": "e29950fa5841d3ce9805e507a664c671edfceb735e5becc91e4ea02467f03279",
+    "manifestSha256": "f6faa7828ced20458d44eaa7a12d6c40dd86a4a3092ba550a260ed52e613ab1f"
+  },
+  "validationFiles": {
+    "src/index.mjs": "e29950fa5841d3ce9805e507a664c671edfceb735e5becc91e4ea02467f03279"
+  }
+}

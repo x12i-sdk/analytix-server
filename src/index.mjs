@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import { createDefaultAuthHook } from '@x12i/analytix-server';
+import { IncomingMessage } from 'node:http';
+import { Socket } from 'node:net';
+const request = new IncomingMessage(new Socket());
+request.headers = {};
+const live = createDefaultAuthHook({ mockMode: false });
+assert.equal(await live.authenticate(request), null);
+const demo = createDefaultAuthHook({ mockMode: true });
+const principal = await demo.authenticate(request);
+assert(principal.roles.includes('analytix:runtime-user'));
+assert.equal(await demo.authorize(principal, { kind: 'playground:promote' }), false);
+request.destroy();
+console.log({ anonymousLiveRequest: 'rejected', demoPrincipal: principal, demoPromotion: 'denied' });
